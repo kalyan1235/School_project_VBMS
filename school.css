@@ -31,9 +31,13 @@ img {
 #one {
   flex: 1;
   min-width: 80px;
+  display: flex;
+  align-items: center; /* Ensures vertical centering */
 }
 #one img {
   height: 60px;
+  margin: 0;
+  display: block;
 }
 
 #two {
@@ -476,6 +480,19 @@ img {
     align-items: center;
     text-align: center;
   }
+
+  /* Header adjustments - logo and nav alignment */
+  #main {
+    flex-wrap: nowrap; /* Prevent wrapping */
+    align-items: center; /* Vertically center */
+    padding: 16px 24px 60px 24px; /* Keep bottom padding */
+  }
+  #one {
+    flex-basis: auto;
+    min-width: auto;
+    display: flex;
+    align-items: center;
+  }
   #two {
     display: none;
     flex-direction: column;
@@ -510,13 +527,6 @@ img {
     right: 24px;
     z-index: 1001;
   }
-  #main {
-    flex-direction: row;
-    padding: 16px 24px 60px 24px;
-  }
-  #one {
-    flex-basis: 100%;
-  }
 }
 
 @media (max-width: 600px) {
@@ -525,6 +535,7 @@ img {
     min-height: 110px;
     width: calc(100% - 8px);
     border-radius: 7px;
+    height: auto;
   }
   .banner img {
     min-height: 70px;
